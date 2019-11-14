@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -38,7 +39,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
     }
     @SuppressLint("ResourceType")
     @Override
-    public void onBindViewHolder(@NonNull StudentAdapter.StudentViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull StudentAdapter.StudentViewHolder holder, final int position) {
 
         final Student student = studentList.get(position);
 
@@ -60,6 +61,15 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
         holder.tvAge.setText(String.valueOf(age));
         holder.tvAddress.setText(student.getAddress());
         holder.tvGender.setText(student.getGender());
+        holder.btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                studentList.remove(position);
+                notifyDataSetChanged();
+            }
+        });
 
 
     }
@@ -72,6 +82,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
     public class StudentViewHolder extends RecyclerView.ViewHolder {
         CircleImageView imgProfile;
         TextView tvName,tvGender,tvAge,tvAddress;
+        Button btnDelete;
         public StudentViewHolder(@NonNull View itemView) {
             super(itemView);
             imgProfile = itemView.findViewById(R.id.imgProfile);
@@ -79,6 +90,10 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.StudentV
             tvGender = itemView.findViewById(R.id.tvGender);
             tvAge = itemView.findViewById(R.id.tvAge);
             tvAddress = itemView.findViewById(R.id.tvAddress);
+            btnDelete=itemView.findViewById(R.id.btnDelete);
+
+
+
         }
     }
 }
