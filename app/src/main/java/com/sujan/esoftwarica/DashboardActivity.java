@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.sujan.esoftwarica.ui.aboutus.AboutUsFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
