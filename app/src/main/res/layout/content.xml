@@ -10,7 +10,7 @@
             android:id="@+id/card_view"
         android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardBackgroundColor="@color/cardview_shadow_end_color"
+            app:cardBackgroundColor="#ffffff"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"
             app:cardUseCompatPadding="true"
@@ -27,6 +27,7 @@
                 android:id="@+id/imgProfile"
                 android:layout_width="96dp"
                 android:layout_height="124dp"
+                android:layout_marginStart="24dp"
                 android:src="@drawable/noimage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,7 +49,7 @@
                 android:layout_width="97dp"
                 android:layout_height="56dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginEnd="16dp"
                 android:drawableStart="@drawable/del"
                 android:text="Delete"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -58,13 +59,11 @@
                 android:id="@+id/tvGender"
                 android:layout_width="66dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="60dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="92dp"
+                android:layout_marginEnd="32dp"
                 android:text="Gender"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/btnDelete"
-                app:layout_constraintVertical_bias="0.767" />
+                app:layout_constraintTop_toBottomOf="@+id/btnDelete" />
 
             <TextView
                 android:id="@+id/tvAddress"
