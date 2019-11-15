@@ -93,9 +93,9 @@ public class AddStudentFragment extends Fragment implements  View.OnClickListene
                 etAge.setText("");
                 etAddress.setText("");
                 etAge.setText("");
-                rFemale.clearFocus();
-                rOthers.clearFocus();
-                rMale.clearFocus();
+                rFemale.setChecked(false);
+                rOthers.setChecked(false);
+                rMale.setChecked(false);
 
 
         break;
